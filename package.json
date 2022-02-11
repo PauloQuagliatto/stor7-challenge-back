@@ -16,10 +16,7 @@
   "homepage": "https://github.com/PauloQuagliatto/stor7-challenge#readme",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "npm install && npm run build --prefix client",
-    "client": "npm start --prefix client",
-    "server": "nodemon server.js --ignore client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "nodemon server.js"
   },
   "dependencies": {
     "axios": "^0.25.0",
