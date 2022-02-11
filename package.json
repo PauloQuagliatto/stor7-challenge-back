@@ -1,0 +1,35 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Paulo Miranda Quagliatto",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloQuagliatto/stor7-challenge.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloQuagliatto/stor7-challenge/issues"
+  },
+  "homepage": "https://github.com/PauloQuagliatto/stor7-challenge#readme",
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "npm install && npm run build --prefix client",
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js --ignore client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
